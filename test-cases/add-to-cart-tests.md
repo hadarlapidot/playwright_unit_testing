@@ -10,10 +10,9 @@
 - **Steps**:
   1. Go to the inventory page.
   2. Click "add to cart" on the "Sauce Labs Backpack" item.
-  3. Ensure the item has been added to the cart
 - **Expected Result**:
-  - The number inside the red circle should be increased by 1.
-  - The button "Add to cart" should change its text to "Remove" and it's colot to red.
+  - The number inside the red circle should be 1.
+  - The button "Add to cart" should change its text to "Remove".
 
 ---
 
@@ -22,7 +21,6 @@
 - **Steps**:
   1. Go to the inventory page.
   2. Click "Remove" on the "Sauce Labs Backpack" item.
-  3. Ensure the item has been removed from the cart
 - **Expected Result**:
-  - The number inside the red circle should be decreased by 1.
-  - The button "Add to cart" should change its text to "Add to cart" and it's colot to black.
+  - The red circle should disapear
+  - The button "Remove" should change its text to "Add to cart".

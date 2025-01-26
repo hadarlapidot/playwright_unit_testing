@@ -1,4 +1,4 @@
-const { expect } = require("playwright/test");
+const { expect, errors } = require("playwright/test");
 
 class inventoryPage {
   constructor(page) {
@@ -15,11 +15,24 @@ class inventoryPage {
   }
 
   async AddItem() {
+    // add the item to the cart
     await this.AddBackpackButton.click();
-    const numOfItems = await this.cartBadge.textContent();
-    await this.cartBadge.screenshot({
-      path: `./screenshots/NumberOfItemAfterAddingItem.png`,
-    });
   }
+
+  async RemoveItem() {
+    await this.removeBackpackButton.click();
+  }
+
+  // async AddItem() {
+  //   // add the item to the cart
+  //   await this.AddBackpackButton.click();
+  //   // check if the red circle is now visible(and exist)
+  //   await expect(this.cartBadge).toBeVisible(); //It's better to use expect to assert visibility according to documentation
+  //   const numOfItems = await this.cartBadge.textContent();
+  //   await this.cartBadge.screenshot({
+  //     path: `./screenshots/NumberOfItemAfterAddingItem.png`,
+  //   });
+  // }
 }
+
 module.exports = inventoryPage;
