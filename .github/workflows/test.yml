@@ -31,3 +31,9 @@ jobs:
       - name: Run Playwright tests
         run: |
           npx playwright test
+
+      - name: Upload Test Results to GitHub Actions
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-results
+          path: test-results/results.xml
