@@ -28,7 +28,7 @@
 ### **Test Case 2**: Login with invalid username
 
 - **Test Data**:
-  - Username: `wronguser`
+  - Username: `wrong_user`
   - Password: `secret_sauce`
 - **Steps**:
   1. Go to the login page.
@@ -44,7 +44,7 @@
 
 - **Test Data**:
   - Username: `standard_user`
-  - Password: `wrongpassword`
+  - Password: `wrong_password`
 - **Steps**:
   1. Go to the login page.
   2. Enter the valid username and invalid password.
