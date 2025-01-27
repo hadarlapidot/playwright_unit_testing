@@ -1,0 +1,24 @@
+<testsuites id="" name="" tests="8" failures="0" skipped="0" errors="0" time="5.518722">
+<testsuite name="Add-items.spec.js" timestamp="2025-01-27T19:11:30.633Z" hostname="" tests="2" failures="0" skipped="0" time="2.829" errors="0">
+<testcase name="Add items to cart and remove them › Add item to cart" classname="Add-items.spec.js" time="1.574">
+</testcase>
+<testcase name="Add items to cart and remove them › Remove an item from the cart" classname="Add-items.spec.js" time="1.255">
+</testcase>
+</testsuite>
+<testsuite name="login.spec.js" timestamp="2025-01-27T19:11:30.633Z" hostname="" tests="4" failures="0" skipped="0" time="4.739" errors="0">
+<testcase name="Login tests › Login with valid credentails" classname="login.spec.js" time="1.481">
+</testcase>
+<testcase name="Login tests › Login with invalid username and valid password" classname="login.spec.js" time="0.948">
+</testcase>
+<testcase name="Login tests › Login with valid username and invalid password" classname="login.spec.js" time="1.114">
+</testcase>
+<testcase name="Login tests › Login with empty fields" classname="login.spec.js" time="1.196">
+</testcase>
+</testsuite>
+<testsuite name="sort-items.spec.js" timestamp="2025-01-27T19:11:30.633Z" hostname="" tests="2" failures="0" skipped="0" time="2.785" errors="0">
+<testcase name="Sort items by price(low to high) › Sort items by price(low to high)" classname="sort-items.spec.js" time="1.518">
+</testcase>
+<testcase name="Sort items by price(low to high) › Sort items by price(high to low)" classname="sort-items.spec.js" time="1.267">
+</testcase>
+</testsuite>
+</testsuites>

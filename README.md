@@ -34,7 +34,7 @@ This project demonstrates QA automation for the Swag Labs e-commerce website. It
 
 4. Install dependencies:
    ```bash
-   npm install
+   npm install @playwright/test --save-dev
    ```
 
 ---
