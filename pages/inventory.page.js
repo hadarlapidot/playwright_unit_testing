@@ -12,6 +12,8 @@ class inventoryPage {
       'button[id="remove-sauce-labs-backpack"]'
     ); // Remove button for the backpack
     this.cartBadge = page.locator(".shopping_cart_badge");
+    this.sortDropdown = page.locator('[data-test="product-sort-container"]');
+    this.itemPrices = page.locator(".inventory_item_price");
   }
 
   async AddItem() {
@@ -21,6 +23,15 @@ class inventoryPage {
 
   async RemoveItem() {
     await this.removeBackpackButton.click();
+  }
+
+  async sortBy(option) {
+    await this.sortDropdown.selectOption(option);
+  }
+
+  async getItemsPrices() {
+    const prices = await this.itemPrices.allTextContents();
+    return prices.map((price) => parseFloat(price.replace("$", "")));
   }
 
   // async AddItem() {
