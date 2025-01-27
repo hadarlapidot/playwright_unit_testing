@@ -21,5 +21,23 @@ test.describe("Sort items by price(low to high)", () => {
     const sortedPrices = [...prices].sort((a, b) => a - b);
     // Verify the prices array is sorted
     expect(prices).toEqual(sortedPrices);
+    await page.screenshot({
+      path: `./screenshots/ItemsSorted-LowtoHigh.png`,
+    });
+  });
+
+  test("Sort items by price(high to low)", async ({ page }) => {
+    const inventoryPage = new InventoryPage(page);
+    // sort the items
+    await inventoryPage.sortBy("hilo");
+    // get the array of items prices
+    const prices = await inventoryPage.getItemsPrices();
+    // create a sorted duplicate
+    const sortedPrices = [...prices].sort((a, b) => b - a);
+    // Verify the prices array is sorted
+    expect(prices).toEqual(sortedPrices);
+    await page.screenshot({
+      path: `./screenshots/ItemsSorted-HightoLow.png`,
+    });
   });
 });

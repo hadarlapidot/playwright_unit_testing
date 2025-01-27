@@ -13,6 +13,7 @@ test.describe("Login tests", () => {
     await page.goto("https://www.saucedemo.com/");
     await loginPage.login(testData.validUsername, testData.validPassword);
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+    await page.screenshot({ path: `./screenshots/LoggedInSuccessfully.png` });
   });
 
   test("Login with invalid username and valid password", async ({ page }) => {
@@ -21,6 +22,9 @@ test.describe("Login tests", () => {
     await expect(loginPage.errorMessage).toHaveText(
       "Epic sadface: Username and password do not match any user in this service"
     );
+    await loginPage.errorMessage.screenshot({
+      path: `./screenshots/LoggedInFailed-username.png`,
+    });
   });
 
   test("Login with valid username and invalid password", async ({ page }) => {
@@ -29,6 +33,9 @@ test.describe("Login tests", () => {
     await expect(loginPage.errorMessage).toHaveText(
       "Epic sadface: Username and password do not match any user in this service"
     );
+    await loginPage.errorMessage.screenshot({
+      path: `./screenshots/LoggedInFailed-passowrd.png`,
+    });
   });
 
   test("Login with empty fields", async ({ page }) => {
@@ -37,5 +44,8 @@ test.describe("Login tests", () => {
     await expect(loginPage.errorMessage).toHaveText(
       "Epic sadface: Username is required"
     );
+    await loginPage.errorMessage.screenshot({
+      path: `./screenshots/LoggedInFailed-emptyFields.png`,
+    });
   });
 });
